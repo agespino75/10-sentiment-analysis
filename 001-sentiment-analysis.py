@@ -5,7 +5,7 @@ openai_api_key = os.environ["OPENAI_API_KEY"]
 
 from langchain_openai import ChatOpenAI
 
-llm = ChatOpenAI(model="gpt-3.5-turbo-0125")
+llm = ChatOpenAI(model="gpt-4o-mini")
 
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.pydantic_v1 import BaseModel, Field
@@ -30,7 +30,7 @@ class Classification(BaseModel):
 
 
 # LLM
-llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo-0125").with_structured_output(
+llm = ChatOpenAI(temperature=0, model="gpt-4o-mini").with_structured_output(
     Classification
 )
 
@@ -110,4 +110,6 @@ print("Sentiment analysis Biden follower (with a list of options using enums):")
 print("\n----------\n")
 print(response)
 
+print("\n----------\n")
+print("\n----------\n")
 print("\n----------\n")
